@@ -1,16 +1,30 @@
+import user from 'json/user';
+import data from 'json/data';
+import friends from 'json/friends';
+import transactions from 'json/transactions';
+
+import { UserProfile } from './UserProfile/UserProfile';
+
+
+const {
+  username,
+  tag,
+  location,
+  avatar,
+  stats,
+} = user;
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div style={{ padding: '50px 0' }}>
+      <UserProfile 
+        username={username}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        stats={stats}
+      />
     </div>
+    
   );
 };
