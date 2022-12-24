@@ -5,6 +5,7 @@ import transactions from 'json/transactions';
 
 import { UserProfile } from './UserProfile/UserProfile';
 import { Statistics } from './Statistics/Statistics';
+import { Friends } from './Friends/Friends';
 
 const { username, tag, location, avatar, stats } = user;
 
@@ -21,6 +22,8 @@ export const App = () => {
 
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
+
+      <Friends friends={friends} />
     </div>
   );
 };
